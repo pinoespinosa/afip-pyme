@@ -37,9 +37,10 @@ def editarArchivosExcel(path, key):
 
 		xls_modif.append('</table><br></body> </html>')
 
-		file = open(path,"w") 
+		file = codecs.open(path, 'w', 'iso-8859-1')
 		for pal in xls_modif:
-			file.write(pal.strip()+'\n'); 
+			s = pal.strip()+'\n'
+			file.write( s ); 
 		file.close();
 	except:
 		print("Error trying to filter " + path);
