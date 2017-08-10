@@ -121,7 +121,7 @@ def getURL( URL, key):
 	html='';
 	while tries<11:
 		try:
-			response = urllib.request.urlopen(URL, timeout=120)
+			response = urllib.request.urlopen(URL, timeout=360)
 			html = response.read()
 			break
 		except KeyboardInterrupt:
